@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta https-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
-    <title>天气预报查询</title>
+    <title>杨凌实时天气预报查询</title>
     <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
     <style type="text/css">
         #weather {
@@ -35,13 +35,13 @@
 <script type="text/javascript">
     var map = new AMap.Map('container', {
         resizeEnable: true,
-		center: [116.486409,39.921489],
+		center: [108.09387,34.262224],
         zoom: 12
     });
     AMap.service('AMap.Weather', function() {
         var weather = new AMap.Weather();
         //查询实时天气信息, 查询的城市到行政级别的城市，如朝阳区、杭州市
-        weather.getLive('朝阳区', function(err, data) {
+        weather.getLive('杨凌区', function(err, data) {
             if (!err) {
                 var str = [];
                 str.push('<div style="color: #3366FF;">实时天气' + '</div>');
